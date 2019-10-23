@@ -91,7 +91,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-        """ update rectangle"""
+        """ update rectangle """
         if args:
             attrs = ["id", "width", "height", "x", "y"]
             for i, e in enumerate(args):
@@ -100,3 +100,10 @@ class Rectangle(Base):
         for k, v in kwargs.items():
             if hasattr(self, k):
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """ dictionary rectangle """
+        d = {}
+        for k, v in vars(self).items():
+            d[k.split("__")[-1]] = v
+        return d
