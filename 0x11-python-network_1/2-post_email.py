@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Send post with email
+send post with email
 """
 
 import urllib.request

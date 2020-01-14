@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Fetch url
+fetch url
 """
 
 import urllib.request
